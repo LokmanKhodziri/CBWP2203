@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Participating Companies - Virtual Career Fair 2024</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/utilities.css">
+    <link rel="stylesheet" href="css/companies.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="companies.html">Participating Companies</a></li>
+                <li><a href="schedule.html">Event Schedule</a></li>
+                <li><a href="resources.html">Career Resources</a></li>
+                <li><a href="registration.html">Registration</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>Participating Companies</h1>
+        </section>
+
+        <section class="company-filters">
+            <h2>Browse by Industry</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Industries</button>
+                <button class="filter-btn" data-filter="tech">Technology</button>
+                <button class="filter-btn" data-filter="finance">Finance</button>
+                <button class="filter-btn" data-filter="healthcare">Healthcare</button>
+                <button class="filter-btn" data-filter="education">Education</button>
+            </div>
+        </section>
+
+        <section class="companies-grid">
+            <!-- Technology Companies -->
+            <div class="company-card" data-category="tech">
+                <img src="images/companies/tech1.jpg" alt="Tech Company 1" class="company-logo">
+                <h3>Tech Innovations Inc.</h3>
+                <p class="industry">Technology</p>
+                <p class="description">Leading software development company specializing in AI and cloud solutions.</p>
+                <div class="job-openings">
+                    <h4>Open Positions:</h4>
+                    <ul>
+                        <li>Software Engineer</li>
+                        <li>Data Scientist</li>
+                        <li>Product Manager</li>
+                    </ul>
+                </div>
+                <a href="#" class="company-link">Visit Company Website</a>
+            </div>
+
+            <!-- Finance Companies -->
+            <div class="company-card" data-category="finance">
+                <img src="images/companies/finance1.jpg" alt="Finance Company 1" class="company-logo">
+                <h3>Global Finance Partners</h3>
+                <p class="industry">Finance</p>
+                <p class="description">International financial services firm offering investment and banking solutions.</p>
+                <div class="job-openings">
+                    <h4>Open Positions:</h4>
+                    <ul>
+                        <li>Financial Analyst</li>
+                        <li>Investment Banking Associate</li>
+                        <li>Risk Management Specialist</li>
+                    </ul>
+                </div>
+                <a href="#" class="company-link">Visit Company Website</a>
+            </div>
+
+            <!-- Healthcare Companies -->
+            <div class="company-card" data-category="healthcare">
+                <img src="images/companies/health1.jpg" alt="Healthcare Company 1" class="company-logo">
+                <h3>MediCare Solutions</h3>
+                <p class="industry">Healthcare</p>
+                <p class="description">Healthcare technology company focused on improving patient care through innovation.</p>
+                <div class="job-openings">
+                    <h4>Open Positions:</h4>
+                    <ul>
+                        <li>Healthcare Administrator</li>
+                        <li>Medical Research Analyst</li>
+                        <li>Clinical Systems Specialist</li>
+                    </ul>
+                </div>
+                <a href="#" class="company-link">Visit Company Website</a>
+            </div>
+
+            <!-- Education Companies -->
+            <div class="company-card" data-category="education">
+                <img src="images/companies/edu1.jpg" alt="Education Company 1" class="company-logo">
+                <h3>EduTech International</h3>
+                <p class="industry">Education</p>
+                <p class="description">Educational technology company revolutionizing learning through digital solutions.</p>
+                <div class="job-openings">
+                    <h4>Open Positions:</h4>
+                    <ul>
+                        <li>Educational Content Developer</li>
+                        <li>Learning Experience Designer</li>
+                        <li>Educational Technology Specialist</li>
+                    </ul>
+                </div>
+                <a href="#" class="company-link">Visit Company Website</a>
+            </div>
+        </section>
+
+        <section class="company-search">
+            <h2>Search Companies</h2>
+            <div class="search-container">
+                <input type="text" id="companySearch" placeholder="Search by company name or position...">
+                <button type="button" class="search-btn">Search</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Virtual Career Fair. All rights reserved.</p>
+    </footer>
+
+    <script src="js/companies.js"></script>
+</body>
+</html> 

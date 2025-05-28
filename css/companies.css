@@ -1,0 +1,148 @@
+/* Company Filters */
+.company-filters {
+    padding: 2rem;
+    background-color: #f8f9fa;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.filter-btn {
+    padding: 0.5rem 1.5rem;
+    border: 2px solid #3498db;
+    background: none;
+    color: #3498db;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background-color: #3498db;
+    color: white;
+}
+
+/* Companies Grid */
+.companies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.company-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.company-card:hover {
+    transform: translateY(-5px);
+}
+
+.company-logo {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.industry {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.description {
+    margin: 1rem 0;
+}
+
+.job-openings {
+    margin-top: 1rem;
+}
+
+.job-openings ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.job-openings li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.job-openings li::before {
+    content: '•';
+    color: #3498db;
+    margin-right: 0.5rem;
+}
+
+.company-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.company-link:hover {
+    background-color: #2980b9;
+}
+
+/* Search Functionality */
+.company-search {
+    margin-bottom: 2rem;
+}
+
+.search-container {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    gap: 1rem;
+}
+
+#companySearch {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.search-btn {
+    padding: 0.5rem 1rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .filter-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-container {
+        flex-direction: column;
+    }
+
+    .search-btn {
+        width: 100%;
+    }
+} 
