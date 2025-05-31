@@ -168,6 +168,19 @@
                 </div>
             </form>
         </section>
+
+        <div id="registrationSuccess" style="display: none;" class="success-section">
+            <h2>Registration Successful!</h2>
+            <div class="registration-details">
+                <p><strong>Full Name:</strong> <span id="displayFullName"></span></p>
+                <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+                <p><strong>Phone:</strong> <span id="displayPhone"></span></p>
+                <p><strong>Institution:</strong> <span id="displayInstitution"></span></p>
+                <p><strong>Field of Study:</strong> <span id="displayFieldOfStudy"></span></p>
+                <p><strong>Areas of Interest:</strong> <span id="displayAreasOfInterest"></span></p>
+                <p><strong>Sessions to Attend:</strong> <span id="displaySessionsToAttend"></span></p>
+            </div>
+        </div>
     </main>
 
     <footer>
@@ -175,5 +188,72 @@
     </footer>
 
     <script src="js/registration.js"></script>
+
+    <style>
+    .success-section {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .success-section h2 {
+        color: #28a745;
+        margin-bottom: 20px;
+    }
+
+    .registration-details {
+        background-color: white;
+        padding: 20px;
+        border-radius: 4px;
+    }
+
+    .registration-details p {
+        margin: 10px 0;
+        line-height: 1.6;
+    }
+
+    .registration-details strong {
+        color: #495057;
+        min-width: 150px;
+        display: inline-block;
+    }
+    </style>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal" style="display:none;">
+      <div class="modal-content">
+        <span class="close" id="closeModalBtn">&times;</span>
+        <h2>Thank You for Registering!</h2>
+        <p>Your registration was successful. We look forward to seeing you at the Virtual Career Fair!</p>
+        <button id="modalOkBtn">OK</button>
+      </div>
+    </div>
+
+    <style>
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0; top: 0; width: 100%; height: 100%;
+      overflow: auto; background-color: rgba(0,0,0,0.4);
+    }
+    .modal-content {
+      background-color: #fff; margin: 10% auto; padding: 30px; border: 1px solid #888;
+      width: 90%; max-width: 400px; border-radius: 8px; text-align: center;
+      position: relative;
+    }
+    .close {
+      color: #aaa; float: right; font-size: 28px; font-weight: bold; cursor: pointer;
+      position: absolute; right: 20px; top: 10px;
+    }
+    .close:hover, .close:focus { color: #000; text-decoration: none; cursor: pointer; }
+    #modalOkBtn {
+      margin-top: 20px; padding: 10px 30px; background: #28a745; color: #fff; border: none; border-radius: 4px; cursor: pointer;
+    }
+    #modalOkBtn:hover { background: #218838; }
+    </style>
 </body>
 </html> 
