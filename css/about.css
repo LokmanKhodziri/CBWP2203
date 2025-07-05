@@ -70,6 +70,12 @@
     color: inherit;
 }
 
+.partner-item p {
+    margin-top: auto;
+    font-size: 0.9rem;
+    color: #555;
+}
+
 .partner-logo {
     max-width: 150px;
     height: auto;
