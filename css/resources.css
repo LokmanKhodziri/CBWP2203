@@ -1,193 +1,416 @@
 /* Resources Categories */
 .resources-categories {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
 .category-card {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    padding: 2rem;
-    margin-bottom: 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.category-card h2 {
+  background-color: #3498db;
+  color: white;
+  padding: 1rem 2rem;
+  margin: 0;
+  font-size: 1.3rem;
 }
 
 .resource-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
 }
 
 .resource-item {
-    padding: 1.5rem;
-    background: #f8f9fa;
-    border-radius: 8px;
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 6px;
+  border-left: 4px solid #3498db;
+}
+
+.resource-item h3 {
+  color: #2c3e50;
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+}
+
+.resource-item p {
+  color: #666;
+  margin-bottom: 1rem;
+  line-height: 1.5;
 }
 
 .resource-links {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
-.download-btn, .view-btn {
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    text-decoration: none;
-    transition: all 0.3s ease;
+.download-btn,
+.view-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  white-space: nowrap;
 }
 
 .download-btn {
-    background-color: #3498db;
-    color: white;
-}
-
-.view-btn {
-    background-color: #2c3e50;
-    color: white;
+  background-color: #28a745;
+  color: white;
 }
 
 .download-btn:hover {
-    background-color: #2980b9;
+  background-color: #218838;
+}
+
+.view-btn {
+  background-color: #17a2b8;
+  color: white;
 }
 
 .view-btn:hover {
-    background-color: #34495e;
+  background-color: #138496;
 }
 
 /* Video Tutorials */
 .video-tutorials {
-    padding: 4rem 2rem;
-    background-color: #f8f9fa;
+  background-color: #f8f9fa;
+  padding: 3rem 2rem;
+  text-align: center;
 }
 
 .video-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .video-card {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    overflow: hidden;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-2px);
 }
 
 .video-thumbnail {
-    position: relative;
-    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
 }
 
 .video-thumbnail img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .play-button {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 60px;
-    height: 60px;
-    background: rgba(0, 0, 0, 0.7);
-    border-radius: 50%;
-    cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .play-button::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 55%;
-    transform: translate(-50%, -50%);
-    border-style: solid;
-    border-width: 15px 0 15px 25px;
-    border-color: transparent transparent transparent white;
+  content: "▶";
+  color: white;
+  font-size: 1.5rem;
+  margin-left: 3px;
+}
+
+.play-button:hover {
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 .video-card h3 {
-    padding: 1rem;
-    margin: 0;
+  padding: 1rem 1.5rem 0.5rem;
+  color: #2c3e50;
+  margin: 0;
 }
 
 .video-card p {
-    padding: 0 1rem;
-    color: #666;
+  padding: 0 1.5rem 1rem;
+  color: #666;
+  margin: 0;
 }
 
 .watch-btn {
-    display: block;
-    padding: 1rem;
-    background-color: #3498db;
-    color: white;
-    text-decoration: none;
-    text-align: center;
-    transition: background-color 0.3s ease;
+  display: inline-block;
+  margin: 0 1.5rem 1.5rem;
+  padding: 0.8rem 1.5rem;
+  background-color: #dc3545;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
 .watch-btn:hover {
-    background-color: #2980b9;
+  background-color: #c82333;
 }
 
 /* Additional Resources */
 .additional-resources {
-    padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
 }
 
 .resources-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
 .resource-link {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    padding: 1.5rem;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.resource-link h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 0.5rem;
 }
 
 .resource-link ul {
-    list-style: none;
-    padding-left: 0;
+  list-style: none;
+  padding-left: 0;
 }
 
 .resource-link li {
-    margin-bottom: 0.5rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.resource-link li:last-child {
+  border-bottom: none;
 }
 
 .resource-link a {
-    color: #3498db;
-    text-decoration: none;
-    transition: color 0.3s ease;
+  color: #3498db;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .resource-link a:hover {
-    color: #2980b9;
-    text-decoration: underline;
+  color: #2980b9;
+  text-decoration: underline;
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+  .resources-categories {
+    padding: 1.5rem;
+  }
+
+  .resource-grid {
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .video-tutorials {
+    padding: 2rem 1.5rem;
+  }
+
+  .video-grid {
+    gap: 1.5rem;
+  }
+
+  .additional-resources {
+    padding: 2rem 1.5rem;
+  }
+
+  .resources-list {
+    gap: 1.5rem;
+  }
+}
+
 @media (max-width: 768px) {
-    .resource-grid {
-        grid-template-columns: 1fr;
-    }
+  .resources-categories {
+    padding: 1rem;
+  }
 
-    .resource-links {
-        flex-direction: column;
-    }
+  .category-card h2 {
+    padding: 0.8rem 1rem;
+    font-size: 1.2rem;
+  }
 
-    .download-btn, .view-btn {
-        text-align: center;
-    }
-} 
+  .resource-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .resource-item {
+    padding: 1rem;
+  }
+
+  .resource-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .download-btn,
+  .view-btn {
+    text-align: center;
+    padding: 0.8rem 1rem;
+  }
+
+  .video-tutorials {
+    padding: 2rem 1rem;
+  }
+
+  .video-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .video-thumbnail {
+    height: 180px;
+  }
+
+  .play-button {
+    width: 50px;
+    height: 50px;
+  }
+
+  .play-button::before {
+    font-size: 1.2rem;
+  }
+
+  .additional-resources {
+    padding: 2rem 1rem;
+  }
+
+  .resources-list {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .resource-link {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .resources-categories {
+    padding: 0.8rem;
+  }
+
+  .category-card h2 {
+    padding: 0.6rem 0.8rem;
+    font-size: 1.1rem;
+  }
+
+  .resource-grid {
+    padding: 0.8rem;
+    gap: 0.8rem;
+  }
+
+  .resource-item {
+    padding: 0.8rem;
+  }
+
+  .resource-item h3 {
+    font-size: 1rem;
+  }
+
+  .resource-item p {
+    font-size: 0.9rem;
+  }
+
+  .download-btn,
+  .view-btn {
+    padding: 0.7rem 0.8rem;
+    font-size: 0.85rem;
+  }
+
+  .video-tutorials {
+    padding: 1.5rem 0.8rem;
+  }
+
+  .video-thumbnail {
+    height: 160px;
+  }
+
+  .play-button {
+    width: 45px;
+    height: 45px;
+  }
+
+  .play-button::before {
+    font-size: 1rem;
+  }
+
+  .video-card h3 {
+    padding: 0.8rem 1rem 0.4rem;
+    font-size: 1rem;
+  }
+
+  .video-card p {
+    padding: 0 1rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .watch-btn {
+    margin: 0 1rem 1rem;
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .additional-resources {
+    padding: 1.5rem 0.8rem;
+  }
+
+  .resource-link {
+    padding: 1rem;
+  }
+
+  .resource-link h3 {
+    font-size: 1rem;
+  }
+
+  .resource-link li {
+    font-size: 0.9rem;
+    padding: 0.4rem 0;
+  }
+}

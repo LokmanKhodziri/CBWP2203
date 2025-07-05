@@ -1,259 +1,337 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registration - Virtual Career Fair 2024</title>
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/utilities.css">
-    <link rel="stylesheet" href="css/registration.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/utilities.css" />
+    <link rel="stylesheet" href="css/registration.css" />
+  </head>
+  <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="companies.html">Participating Companies</a></li>
-                <li><a href="schedule.html">Event Schedule</a></li>
-                <li><a href="resources.html">Career Resources</a></li>
-                <li><a href="registration.html">Registration</a></li>
-            </ul>
-        </nav>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="companies.html">Participating Companies</a></li>
+          <li><a href="schedule.html">Event Schedule</a></li>
+          <li><a href="resources.html">Career Resources</a></li>
+          <li><a href="registration.html">Registration</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
-        <section class="page-header">
-            <h1>Registration</h1>
-        </section>
+      <section class="page-header">
+        <h1>Registration</h1>
+      </section>
 
-        <section class="registration-intro">
-            <div class="content-wrapper">
-                <div class="text-content">
-                    <h2>Join the Virtual Career Fair 2024</h2>
-                    <p>Complete the registration form below to participate in our upcoming Virtual Career Fair. This is your opportunity to connect with leading employers, attend workshops, and explore career opportunities.</p>
-                    
-                    <div class="registration-checklist">
-                        <h3>Before You Register</h3>
-                        <ul>
-                            <li>Prepare your updated resume</li>
-                            <li>Have your academic and professional information ready</li>
-                            <li>Choose the sessions you'd like to attend</li>
-                            <li>Ensure you have a stable internet connection</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="image-content">
-                    <img src="images/registration.jpg" alt="Registration Process" class="responsive-image">
-                </div>
+      <section class="registration-intro">
+        <div class="content-wrapper">
+          <div class="text-content">
+            <h2>Join the Virtual Career Fair 2024</h2>
+            <p>
+              Complete the registration form below to participate in our
+              upcoming Virtual Career Fair. This is your opportunity to connect
+              with leading employers, attend workshops, and explore career
+              opportunities.
+            </p>
+
+            <div class="registration-checklist">
+              <h3>Before You Register</h3>
+              <ul>
+                <li>Prepare your updated resume</li>
+                <li>Have your academic and professional information ready</li>
+                <li>Choose the sessions you'd like to attend</li>
+                <li>Ensure you have a stable internet connection</li>
+              </ul>
             </div>
-        </section>
-
-        <section class="registration-form">
-            <h2>Registration Form</h2>
-            <form id="careerFairRegistration" onsubmit="return validateForm()">
-                <div class="form-section">
-                    <h3>Personal Information</h3>
-                    <div class="form-grid">
-                        <div class="form-group">
-                            <label for="firstName">First Name *</label>
-                            <input type="text" id="firstName" name="firstName" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="lastName">Last Name *</label>
-                            <input type="text" id="lastName" name="lastName" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address *</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="form-section">
-                    <h3>Academic Information</h3>
-                    <div class="form-grid">
-                        <div class="form-group">
-                            <label for="education">Highest Education Level *</label>
-                            <select id="education" name="education" required>
-                                <option value="">Select Education Level</option>
-                                <option value="high-school">High School</option>
-                                <option value="bachelors">Bachelor's Degree</option>
-                                <option value="masters">Master's Degree</option>
-                                <option value="phd">PhD</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="major">Major/Field of Study *</label>
-                            <input type="text" id="major" name="major" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="graduationYear">Expected Graduation Year *</label>
-                            <input type="number" id="graduationYear" name="graduationYear" min="2024" max="2030" required>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="form-section">
-                    <h3>Career Interests</h3>
-                    <div class="form-group">
-                        <label>Areas of Interest (Select all that apply) *</label>
-                        <div class="checkbox-group">
-                            <label>
-                                <input type="checkbox" name="interests" value="technology"> Technology
-                            </label>
-                            <label>
-                                <input type="checkbox" name="interests" value="finance"> Finance
-                            </label>
-                            <label>
-                                <input type="checkbox" name="interests" value="healthcare"> Healthcare
-                            </label>
-                            <label>
-                                <input type="checkbox" name="interests" value="education"> Education
-                            </label>
-                            <label>
-                                <input type="checkbox" name="interests" value="marketing"> Marketing
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="form-section">
-                    <h3>Session Preferences</h3>
-                    <div class="form-group">
-                        <label>Select Sessions to Attend (Select at least one) *</label>
-                        <div class="checkbox-group">
-                            <label>
-                                <input type="checkbox" name="sessions" value="opening"> Opening Ceremony
-                            </label>
-                            <label>
-                                <input type="checkbox" name="sessions" value="resume"> Resume Workshop
-                            </label>
-                            <label>
-                                <input type="checkbox" name="sessions" value="interview"> Interview Preparation
-                            </label>
-                            <label>
-                                <input type="checkbox" name="sessions" value="networking"> Networking Session
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="form-section">
-                    <h3>Resume Upload</h3>
-                    <div class="form-group">
-                        <label for="resume">Upload Your Resume (PDF or DOCX) *</label>
-                        <input type="file" id="resume" name="resume" accept=".pdf,.docx" required>
-                    </div>
-                </div>
-
-                <div class="form-section">
-                    <div class="form-group">
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="terms" required>
-                            I agree to the terms and conditions and consent to the processing of my personal data *
-                        </label>
-                    </div>
-                </div>
-
-                <div class="form-actions">
-                    <button type="submit" class="submit-btn">Submit Registration</button>
-                    <button type="reset" class="reset-btn">Reset Form</button>
-                </div>
-            </form>
-        </section>
-
-        <div id="registrationSuccess" style="display: none;" class="success-section">
-            <h2>Registration Successful!</h2>
-            <div class="registration-details">
-                <p><strong>Full Name:</strong> <span id="displayFullName"></span></p>
-                <p><strong>Email:</strong> <span id="displayEmail"></span></p>
-                <p><strong>Phone:</strong> <span id="displayPhone"></span></p>
-                <p><strong>Institution:</strong> <span id="displayInstitution"></span></p>
-                <p><strong>Field of Study:</strong> <span id="displayFieldOfStudy"></span></p>
-                <p><strong>Areas of Interest:</strong> <span id="displayAreasOfInterest"></span></p>
-                <p><strong>Sessions to Attend:</strong> <span id="displaySessionsToAttend"></span></p>
-            </div>
+          </div>
+          <div class="image-content">
+            <img
+              src="src/registration.png"
+              alt="Registration Process"
+              class="responsive-image" />
+          </div>
         </div>
+      </section>
+
+      <section class="registration-form">
+        <h2>Registration Form</h2>
+        <form id="careerFairRegistration" onsubmit="return validateForm()">
+          <div class="form-section">
+            <h3>Personal Information</h3>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" name="firstName" required />
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name *</label>
+                <input type="text" id="lastName" name="lastName" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h3>Academic Information</h3>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="education">Highest Education Level *</label>
+                <select id="education" name="education" required>
+                  <option value="">Select Education Level</option>
+                  <option value="high-school">High School</option>
+                  <option value="bachelors">Bachelor's Degree</option>
+                  <option value="masters">Master's Degree</option>
+                  <option value="phd">PhD</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="major">Major/Field of Study *</label>
+                <input type="text" id="major" name="major" required />
+              </div>
+              <div class="form-group">
+                <label for="graduationYear">Expected Graduation Year *</label>
+                <input
+                  type="number"
+                  id="graduationYear"
+                  name="graduationYear"
+                  min="2024"
+                  max="2030"
+                  required />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h3>Career Interests</h3>
+            <div class="form-group">
+              <label>Areas of Interest (Select all that apply) *</label>
+              <div class="checkbox-group">
+                <label>
+                  <input type="checkbox" name="interests" value="technology" />
+                  Technology
+                </label>
+                <label>
+                  <input type="checkbox" name="interests" value="finance" />
+                  Finance
+                </label>
+                <label>
+                  <input type="checkbox" name="interests" value="healthcare" />
+                  Healthcare
+                </label>
+                <label>
+                  <input type="checkbox" name="interests" value="education" />
+                  Education
+                </label>
+                <label>
+                  <input type="checkbox" name="interests" value="marketing" />
+                  Marketing
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h3>Session Preferences</h3>
+            <div class="form-group">
+              <label>Select Sessions to Attend (Select at least one) *</label>
+              <div class="checkbox-group">
+                <label>
+                  <input type="checkbox" name="sessions" value="opening" />
+                  Opening Ceremony
+                </label>
+                <label>
+                  <input type="checkbox" name="sessions" value="resume" />
+                  Resume Workshop
+                </label>
+                <label>
+                  <input type="checkbox" name="sessions" value="interview" />
+                  Interview Preparation
+                </label>
+                <label>
+                  <input type="checkbox" name="sessions" value="networking" />
+                  Networking Session
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h3>Resume Upload</h3>
+            <div class="form-group">
+              <label for="resume">Upload Your Resume (PDF or DOCX) *</label>
+              <input
+                type="file"
+                id="resume"
+                name="resume"
+                accept=".pdf,.docx"
+                required />
+            </div>
+          </div>
+
+          <div class="form-section">
+            <div class="form-group">
+              <label class="checkbox-label">
+                <input type="checkbox" name="terms" required />
+                I agree to the terms and conditions and consent to the
+                processing of my personal data *
+              </label>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="submit-btn">
+              Submit Registration
+            </button>
+            <button type="reset" class="reset-btn">Reset Form</button>
+          </div>
+        </form>
+      </section>
+
+      <div
+        id="registrationSuccess"
+        style="display: none"
+        class="success-section">
+        <h2>Registration Successful!</h2>
+        <div class="registration-details">
+          <p><strong>Full Name:</strong> <span id="displayFullName"></span></p>
+          <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+          <p><strong>Phone:</strong> <span id="displayPhone"></span></p>
+          <p>
+            <strong>Institution:</strong> <span id="displayInstitution"></span>
+          </p>
+          <p>
+            <strong>Field of Study:</strong>
+            <span id="displayFieldOfStudy"></span>
+          </p>
+          <p>
+            <strong>Areas of Interest:</strong>
+            <span id="displayAreasOfInterest"></span>
+          </p>
+          <p>
+            <strong>Sessions to Attend:</strong>
+            <span id="displaySessionsToAttend"></span>
+          </p>
+        </div>
+      </div>
     </main>
 
     <footer>
-        <p>&copy; 2024 Virtual Career Fair. All rights reserved.</p>
+      <p>&copy; 2024 Virtual Career Fair. All rights reserved.</p>
     </footer>
 
     <script src="js/registration.js"></script>
+    <script src="js/mobile-nav.js"></script>
 
     <style>
-    .success-section {
+      .success-section {
         max-width: 800px;
         margin: 20px auto;
         padding: 20px;
         background-color: #f8f9fa;
         border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
 
-    .success-section h2 {
+      .success-section h2 {
         color: #28a745;
         margin-bottom: 20px;
-    }
+      }
 
-    .registration-details {
+      .registration-details {
         background-color: white;
         padding: 20px;
         border-radius: 4px;
-    }
+      }
 
-    .registration-details p {
+      .registration-details p {
         margin: 10px 0;
         line-height: 1.6;
-    }
+      }
 
-    .registration-details strong {
+      .registration-details strong {
         color: #495057;
         min-width: 150px;
         display: inline-block;
-    }
+      }
     </style>
 
     <!-- Success Modal -->
-    <div id="successModal" class="modal" style="display:none;">
+    <div id="successModal" class="modal" style="display: none">
       <div class="modal-content">
         <span class="close" id="closeModalBtn">&times;</span>
         <h2>Thank You for Registering!</h2>
-        <p>Your registration was successful. We look forward to seeing you at the Virtual Career Fair!</p>
+        <p>
+          Your registration was successful. We look forward to seeing you at the
+          Virtual Career Fair!
+        </p>
         <button id="modalOkBtn">OK</button>
       </div>
     </div>
 
     <style>
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 9999;
-      left: 0; top: 0; width: 100%; height: 100%;
-      overflow: auto; background-color: rgba(0,0,0,0.4);
-    }
-    .modal-content {
-      background-color: #fff; margin: 10% auto; padding: 30px; border: 1px solid #888;
-      width: 90%; max-width: 400px; border-radius: 8px; text-align: center;
-      position: relative;
-    }
-    .close {
-      color: #aaa; float: right; font-size: 28px; font-weight: bold; cursor: pointer;
-      position: absolute; right: 20px; top: 10px;
-    }
-    .close:hover, .close:focus { color: #000; text-decoration: none; cursor: pointer; }
-    #modalOkBtn {
-      margin-top: 20px; padding: 10px 30px; background: #28a745; color: #fff; border: none; border-radius: 4px; cursor: pointer;
-    }
-    #modalOkBtn:hover { background: #218838; }
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+      .modal-content {
+        background-color: #fff;
+        margin: 10% auto;
+        padding: 30px;
+        border: 1px solid #888;
+        width: 90%;
+        max-width: 400px;
+        border-radius: 8px;
+        text-align: center;
+        position: relative;
+      }
+      .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        top: 10px;
+      }
+      .close:hover,
+      .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      #modalOkBtn {
+        margin-top: 20px;
+        padding: 10px 30px;
+        background: #28a745;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      #modalOkBtn:hover {
+        background: #218838;
+      }
     </style>
-</body>
-</html> 
+  </body>
+</html>
